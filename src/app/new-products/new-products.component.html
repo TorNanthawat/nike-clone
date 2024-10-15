@@ -1,0 +1,37 @@
+<div class="new-products-container">
+  <div class="new-products-header">
+    <h2>ดูว่ามีอะไรใหม่</h2>
+    <div class="nav-buttons">
+      <a href="" class="select-buy"><h4>เลือกซื้อ</h4></a>
+      <button
+        mat-button
+        class="nav-btn left-btn"
+        (click)="scrollLeft()"
+        [disabled]="leftDisabled"
+      >
+        <mat-icon class="btn-arrow-L">arrow_back_ios</mat-icon>
+      </button>
+      <button
+        mat-button
+        class="nav-btn right-btn"
+        (click)="scrollRight()"
+        [disabled]="rightDisabled"
+      >
+        <mat-icon class="btn-arrow-R">arrow_forward_ios</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <div class="scroll-container" #productContainer>
+    <div class="new-products">
+      <div class="new-products-card flex-item" *ngFor="let product of products">
+        <img [src]="product.src" />
+        <div class="product-info">
+          <h4>{{ product.title }}</h4>
+          <h5>{{ product.info }}</h5>
+          <h3>{{ product.price }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,179 @@
+
+.new-products-container {
+    margin: 100px 0;
+    text-align: left;
+    font-family: 'Kanit', sans-serif;
+  }
+  
+  .new-products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3.5% 0 3.5%;
+  }
+  
+  .new-products-header h2 {
+    font-size: 26px;
+    margin-bottom: 16px;
+    font-family: 'Kanit', sans-serif;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .select-buy {
+    display: flex;
+    text-decoration: none;
+    padding: 14px 0 0 0;
+  }
+  .select-buy h4 {
+    color: #000;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: 'Kanit', sans-serif;
+  }
+  .select-buy h4:hover {
+    color: #5b5b5b;
+  }
+
+  .btn-arrow-R {
+    font-size: 20px;
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-arrow-L {
+    padding-left: 5px;
+    font-size: 20px;
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-btn {
+    background-color: #E5E5E5;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  
+  .nav-btn:disabled {
+    background-color: #f1f1f1;
+    cursor: default;
+  }
+  
+  .nav-btn:hover:not(:disabled) {
+    background-color: #cecece;
+  }
+
+  .scroll-container {
+    width: 100%;
+    overflow-x: scroll;
+    margin: 0 auto;
+    scrollbar-color: transparent transparent;
+  }
+  
+  .scroll-container:hover {
+    scrollbar-color: darkgrey transparent;
+  }
+  
+  .scroll-container::-webkit-scrollbar {
+    height: 8px; /* ความสูงของ scrollbar */
+  }
+  
+  .scroll-container::-webkit-scrollbar-thumb {
+    background-color: transparent; /* ทำให้โปร่งใส */
+  }
+  
+  .scroll-container:hover::-webkit-scrollbar-thumb {
+    background-color: darkgrey; /* เปลี่ยนสีเมื่อ hover */
+  }
+  
+  .new-products {
+    padding: 0 0 2.5% 3.5%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: visible;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .flex-item {
+    flex: 0 0 auto;
+  }
+  
+  .new-products-card {
+    position: relative;
+    width: 30.5%;
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .new-products-card img {
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .product-info h4 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: 'Kanit', sans-serif;
+  }
+  .product-info h5 {
+    color: #707070;
+    margin: 6px 0 14px 0;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Kanit', sans-serif;
+  }
+
+  .product-info h3 {
+    font-size: 17px;
+    font-weight: 500;
+    font-family: 'Kanit', sans-serif;
+  }
+
+  @media (max-width: 1020px) {
+
+    .new-products-header h2 {
+      margin-bottom: 30px;
+    }
+
+    .nav-buttons {
+      display: none;
+    }
+
+    .new-products {
+      padding: 0 0 4% 3.5%;
+    }
+
+    .new-products-card {
+      width: 68%;
+    }
+
+    .product-info h4 {
+      font-size: 15px;
+    }
+    .product-info h5 {
+      font-size: 14px;
+      margin: 4px 0 10px 0;
+    }
+  
+    .product-info h3 {
+      font-size: 15px;
+    }
+  }

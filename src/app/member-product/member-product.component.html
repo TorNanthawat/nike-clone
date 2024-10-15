@@ -1,0 +1,39 @@
+<div class="member-container">
+    <div class="member-header">
+      <h2>สิทธิประโยชน์ของ Member</h2>
+      <div class="nav-buttons">
+        <button
+          mat-button
+          class="nav-btn left-btn"
+          (click)="scrollLeft()"
+          [disabled]="leftDisabled"
+        >
+          <mat-icon class="btn-arrow-L">arrow_back_ios</mat-icon>
+        </button>
+        <button
+          mat-button
+          class="nav-btn right-btn"
+          (click)="scrollRight()"
+          [disabled]="rightDisabled"
+        >
+          <mat-icon class="btn-arrow-R">arrow_forward_ios</mat-icon>
+        </button>
+      </div>
+    </div>
+  
+    <div class="scroll-container" #productContainer>
+      <div class="member-products" >
+
+        <div class="member-product-card flex-item" *ngFor="let product of products">
+          <img [src]="product.scr"/>
+          <div class="product-info">
+            <h4>{{ product.title }}</h4>
+            <h3>{{ product.info }}</h3>
+            <button class="product-button">{{ product.btn }}</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  

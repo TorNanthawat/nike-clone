@@ -1,0 +1,59 @@
+<nav class="navbar">
+  <div class="navbar-right">
+    <img
+      src="assets/images/jumpman-logo.png"
+      alt="Nike Logo"
+      class="logo-nike"
+    />
+    <ul>
+      <li><a href="#">ค้นหาร้าน</a></li>
+      <li class="line-r">|</li>
+      <li><a href="#">ความช่วยเหลือ</a></li>
+      <li class="line-r">|</li>
+      <li><a href="#">เข้าร่วมกับเรา</a></li>
+      <li class="line-r">|</li>
+      <li><a href="#">ลงชื่อเข้าใช้</a></li>
+    </ul>
+  </div>
+
+  <div class="navbar-center">
+    <img src="assets/images/nike-logo.png" alt="Nike Logo" class="logo-nike" />
+    <div class="mock"></div>
+    <ul>
+      <li><a href="#">ใหม่และโดดเด่น</a></li>
+      <li><a href="#">ผู้ชาย</a></li>
+      <li><a href="#">ผู้หญิง</a></li>
+      <li><a href="#">เด็ก</a></li>
+      <li><a href="#">ลดราคา</a></li>
+      <li><a href="#">ออกแบบเองกับ</a></li>
+      <li><a href="#">SNKRS</a></li>
+    </ul>
+    <div class="navbar-center-right">
+      <div class="icon-mobile">
+        <mat-icon>search</mat-icon>
+      </div>
+      <div class="search-container">
+        <div class="icon-search">
+          <mat-icon>search</mat-icon>
+        </div>
+        <input type="text" placeholder="ค้นหา" />
+      </div>
+      <div class="icon-mobile">
+        <mat-icon>person_outline</mat-icon>
+      </div>
+      <div class="icon-r2">
+        <mat-icon>favorite_outline</mat-icon>
+      </div>
+      <div class="icon-r1">
+        <mat-icon>shopping_cart_outline</mat-icon>
+      </div>
+      <div class="icon-mobile">
+        <mat-icon>menu</mat-icon>
+      </div>
+    </div>
+  </div>
+  <div class="navbar-bottom" id="rotating-text">
+    <p class="text-1">{{ currentText }}</p>
+    <a href=""><p class="text-2">{{ currentText2 }}</p></a>
+  </div>
+</nav>

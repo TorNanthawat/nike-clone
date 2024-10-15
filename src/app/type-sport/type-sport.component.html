@@ -1,0 +1,38 @@
+<div class="sport-products-container">
+    <div class="sport-products-header">
+      <h2>เลือกซื้อตามประเภทกีฬา</h2>
+      <div class="nav-buttons">
+        <button
+          mat-button
+          class="nav-btn left-btn"
+          (click)="scrollLeft()"
+          [disabled]="leftDisabled"
+        >
+          <mat-icon class="btn-arrow-L">arrow_back_ios</mat-icon>
+        </button>
+        <button
+          mat-button
+          class="nav-btn right-btn"
+          (click)="scrollRight()"
+          [disabled]="rightDisabled"
+        >
+          <mat-icon class="btn-arrow-R">arrow_forward_ios</mat-icon>
+        </button>
+      </div>
+    </div>
+  
+    <div class="scroll-container" #productContainer>
+      <div class="sport-products">
+        <div
+          class="sport-products-card flex-item"
+          *ngFor="let product of products"
+        >
+          <img [src]="product.src" [alt]="product.alt" />
+          <div class="product-info">
+            <button class="product-button">{{ product.title }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

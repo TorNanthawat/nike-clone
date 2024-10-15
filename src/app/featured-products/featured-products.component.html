@@ -1,0 +1,37 @@
+<div class="featured-container">
+  <div class="featured-header">
+    <h2>สินค้าเด่น</h2>
+    <div class="nav-buttons">
+      <button
+        mat-button
+        class="nav-btn left-btn"
+        (click)="scrollLeft()"
+        [disabled]="leftDisabled"
+      >
+        <mat-icon class="btn-arrow-L">arrow_back_ios</mat-icon>
+      </button>
+      <button
+        mat-button
+        class="nav-btn right-btn"
+        (click)="scrollRight()"
+        [disabled]="rightDisabled"
+      >
+        <mat-icon class="btn-arrow-R">arrow_forward_ios</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <div class="scroll-container" #productContainer>
+    <div class="featured-products" >
+
+      <div class="featured-product-card flex-item" *ngFor="let detail of details">
+        <img [src]="detail.src" />
+        <div class="product-info">
+          <h3>{{ detail.title }}</h3>
+          <button class="product-button">{{ detail.btn }}</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
